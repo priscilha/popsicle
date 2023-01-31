@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     padding: 20px;
+    background-color: #e6f3f9;
 }
 
 
@@ -16,18 +18,43 @@ body{
     height: 230px;
     border-top-left-radius: 70px;
     border-top-right-radius: 70px;
-
-
     border: 3px solid black;
+
+    background: repeating-linear-gradient(315deg,
+            #83d9dc 0%, #83d9dc 10%,
+            #baafd7 10%, #baafd7 20%,
+            #aad4f4 20%, #aad4f4 30%,
+            #fcdcdf 30%, #fcdcdf 40%,
+            #feffbf 40%, #feffbf 50%);
+    background-size: 200% 200%;
+    animation: popsicle-animation 5s linear infinite forwards;
+
 
 }
 
-.stick{
+@keyframes popsicle-animation {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 100%;
+
+    }
+}
+
+.stick {
 
     position: absolute;
     bottom: -80px;
-    width: 50px;
+    margin-left: -23px;
+    left: 50%;
+    width: 40px;
     height: 80px;
     border: 3px solid black;
-    background-color: #f8ca91;
+    background-color: #f7bb72;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+
 }
